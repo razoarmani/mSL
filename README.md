@@ -15,12 +15,12 @@ It was only recently that I started scripting again, blame the pandemic >_<
 
 ## List of scripts
 1. [Infochan.mrc](infochan.mrc)
-   +  This snippet is used to gather detailed stats about users in a channel.
+   +  This snippet is used to gather detailed stats about users in a channel. (:warning: this snippet comes with an [icon](images/infochan.ico))
 
 
 ## Issues
 - [ ] waiting for issues to pop up
 
 ## Credits
-I want to thank all those people who helped me finish writing these snippets, especially @westor7 for putting up with all the lines I keep sending to him :blush:
+I want to thank all those people who helped me finish writing these snippets, especially [westor7](https://github.com/westor7) for putting up with all the lines I keep sending to him :blush:
 

@@ -1,12 +1,13 @@
 - [Introduction](#introduction)
   - [Background](#background)
   - [List of scripts](#list-of-scripts)
+  - [Installation](#installation)
   - [Issues](#issues)
   - [Credits](#credits)
 
 
 # Introduction
-Hello, my name is **Razo**:zzz: (aka *psycho*![](images/favicon.ico)) and I'm a mSL enthusiast. I usually reside on the irc network [Undernet](irc://irc.undernet.org/psycho) I can also be found on [#mSL@ChatHub](irc://irc.chathub.org/msl) and  [#mIRCscriptting@SwiftIRC](irc://irc.swiftirc.net/mIRCscripting)
+Hello, my name is **Razo**:zzz: (aka *psycho* ![](images/favicon.ico =16x16)) and I'm a mSL enthusiast. I usually reside on the irc network [Undernet](irc://irc.undernet.org/psycho) I can also be found on [#mSL@ChatHub](irc://irc.chathub.org/msl) and  [#mIRCscriptting@SwiftIRC](irc://irc.swiftirc.net/mIRCscripting)
 
 ## Background
 I started IRC back in the 90s when dial-up was still a thing, and it has been a crazy ride ever since. 
@@ -15,8 +16,11 @@ It was only recently that I started scripting again, blame the pandemic >_<
 
 ## List of scripts
 1. [Infochan.mrc](infochan.mrc)
-   +  This snippet is used to gather detailed stats about users in a channel. (:warning: this snippet comes with an [icon](images/infochan.ico))
+   +  This snippet is used to gather detailed stats about users in a channel. (:warning: snippet shipped with [icon](images/infochan.ico) ![](images/infochan.ico =16x16))
 
+## Installation
+- ⭐ Simply copy the `.mrc` file to your script directory and type `/load -rs scriptname.mrc`
+- ❗ Some snippets come with icons which can be downloaded from the [images](images/) folder
 
 ## Issues
 - [ ] waiting for issues to pop up

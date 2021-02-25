@@ -7,7 +7,7 @@
 \                           |__|       \/ \/         \/     \/                                     |
  \__________________ if $reality > $fiction { /kill %sanity | echo -a *voices* } __________________/
 //================================================================================================\\
-||                                      INFOCHAN script v1.3                                      ||
+||                                      INFOCHAN script v1.4                                      ||
 ||                        Multi Network Support + Channel mode +c detector                        ||
 ||================================================================================================||
 ||            Key features:                                                                       ||
@@ -36,6 +36,8 @@
 ||================================================================================================||
 ||   Changelog:                                                                                   ||
 ||   ----------                                                                                   ||
+||     v1.4 (25/02/2021)                                                                          ||
+||     → Added spam protection against multiple clicks                                            ||
 ||     v1.3 (24/02/2021)                                                                          ||
 ||     → Added Dialog option and improved some code                                               ||
 ||     v1.2 (12/02/2021)                                                                          ||
@@ -89,7 +91,7 @@ on *:UNLOAD:{
 
 ;--- Globals ---
 
-alias -l infochan_ver { return v1.3 }
+alias -l infochan_ver { return v1.4 }
 
 alias sw { 
   ;syn: $sw([-coenq],target,message) | /sw [-coenq] target message
@@ -304,8 +306,13 @@ on *:DIALOG:infochan:sclick:*: {
     did -fc $dname 3 1
   }
   if ($did = 14) {
-    tokenize 32 $replace($did(1),Channel,-c,Onotice,-o,Notice,-n,Query,-q) $did(3) $did(4)
-    scon $netid($did(2)) | infochan $1-
+    if (!%infochan.spam) { 
+      tokenize 32 $replace($did(1),Channel,-c,Onotice,-o,Notice,-n,Query,-q) $did(3) $did(4)
+      scon $netid($did(2)) | infochan $1- | set -z %infochan.spam 10 | noop $input(Report sent!,o,Success!)
+    }
+    else { 
+      noop $input(Don't spam that button! $crlf Wait $duration(%infochan.spam),o,Spam!) | return
+    }
   }
 }
 
